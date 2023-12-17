@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb+srv://admin:admin123@projectcluster.twovgr9.mongodb.net/test?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://id:password@projectcluster.twovgr9.mongodb.net/test?retryWrites=true&w=majority';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function insertData() {
@@ -12,8 +12,8 @@ async function insertData() {
 
         // Specify the data to be inserted
         const dataToInsert = {
-            username: 'admin',
-            password: 'admin123',
+            username: 'id',
+            password: 'password',
             role: 'admin'
         };
 
