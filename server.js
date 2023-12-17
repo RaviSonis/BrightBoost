@@ -60,7 +60,7 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-mongoose.connect('mongodb+srv://admin:admin123@projectcluster.twovgr9.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://id:password@projectcluster.twovgr9.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -198,7 +198,7 @@ app.get('/api/tutor/current', async (req, res) => {
         }
 
         // Assume the token has an id field for the tutor
-        const decoded = jwt.verify(token, 'Ravi');
+        const decoded = jwt.verify(token, 'token');
         const tutorId = decoded.id;
 
         // Get the tutor's details using the token's ID
